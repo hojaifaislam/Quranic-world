@@ -50,13 +50,13 @@
 
         //10. Client Slider Initialize
             $('.owl-carousel.slider1').owlCarousel({
-                loop: false,
+                loop: true,
                 margin:40,
-                items: 2,
+                items: 3,
                 autoplay: true,
-                autoplayTimeout: 1500,
+                autoplayTimeout: 2000,
                 autoplayHoverPause: true,
-                nav: true,
+                nav: false,
                 dots: false,
                 navText:[
                 '<i class="fal fa-long-arrow-left"></i>',
@@ -72,10 +72,40 @@
                         items: 2
                     },
                     768: {
-                        items: 2
+                        items: 3
                     },
                     992: {
+                        items: 3
+                    }
+                }
+            });
+            $('.owl-carousel.slider2').owlCarousel({
+                loop: true,
+                margin: 5,
+                items: 4,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                nav: false,
+                dots: false,
+                navText:[
+                '<i class="fal fa-long-arrow-left"></i>',
+                '<i class="fal fa-long-arrow-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    390: {
                         items: 2
+                    },
+                    575:{
+                        items: 2
+                    },
+                    768: {
+                        items: 4
+                    },
+                    992: {
+                        items: 4
                     }
                 }
             });

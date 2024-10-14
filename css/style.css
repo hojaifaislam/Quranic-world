@@ -273,7 +273,7 @@ header.sticky img{
 	background-image: url(../img/nav-shape.png);
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-size: 35px auto;
+	background-size: 3.5rem auto;
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
@@ -282,13 +282,6 @@ header.sticky img{
 #menu li:last-child a{
 	padding-right: 0;
 }
-/* #menu>li>a:hover{
-	color: var(--Yellow);
-}
-#menu>li>a.active{
-	color: var(--Yellow);
-	font-weight: 500;
-} */
 main {
    padding-top: 12.3rem;
 }
@@ -349,29 +342,6 @@ main {
 	        transform: translateY(-50%);
 	left: 1.6rem;
 	width: 1.6rem;
-}
-.nice-select {
-	border-radius: 0;
-	border: 0.1rem solid #E7E7E7;
-	font-size: 1.6rem;
-	font-weight: 500;
-	line-height: 1.2;
-	color: var(--dark);
-	outline: none;
-	border-radius: 0;
-	padding: 1.2rem 3.8rem;  
-}
-.nice-select .option:hover,
-.nice-select .option.focus,
-.nice-select .option.selected.focus {
-   color: var(--dark);
-}
-.nice-select .list {
-   background-color: #FF3583;  
-}
-.nice-select:after {
-	border-bottom: 0.2rem solid #FF3583;
-	border-right: 0.2rem solid #FF3583;
 }
 /*home_area*/
 .home_area h1 {
@@ -856,6 +826,25 @@ main {
 	-o-transition: .4s;
 	transition: .4s;
 }
+.expert_wrapper .nav{
+	justify-content: center;
+	column-gap: 1rem;
+	margin-bottom: 2rem;
+}
+.expert_wrapper .nav-pills .nav-link {
+    border: 0.1rem solid #000;
+    width: 16rem;
+    font-size: 2rem;
+    text-align: center;
+    min-height: 7rem;
+    font-weight: 500;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--Yellow);
+	border-color: var(--Yellow);
+}
+  
 /* who_area */
 .who_area{
 	background-repeat: no-repeat;
@@ -876,6 +865,206 @@ main {
 }
 .who_area p{
 	text-align: justify;
+}
+
+/* charity_area */
+.text-center {
+	text-align: center;
+  }
+  
+  .color-white {
+	color: #fff;
+  }
+  
+  .box-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3.5rem 1.5rem;
+	width: 100%;
+	column-gap: 2.0rem;
+  }
+  .box-item {
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width: 20%;
+	margin-bottom: 3.5rem;
+	max-width: 100%;
+  }
+  
+  .flip-box {
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+  }
+  
+  .flip-box-front,
+  .flip-box-back {
+	background-size: cover;
+	background-position: center;
+	border-radius: .8rem;
+	min-height: 31.1rem;
+	-ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+	transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+	-webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-front {
+	-ms-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-box-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-back {
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-box .inner {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: .1rem;
+	outline: .1rem solid transparent;
+	-webkit-perspective: inherit;
+	perspective: inherit;
+	z-index: 2;
+	transform: translateY(-50%) translateZ(6.0rem) scale(.94);
+	-webkit-transform: translateY(-50%) translateZ(6.0rem) scale(.94);
+	-ms-transform: translateY(-50%) translateZ(6.0rem) scale(.94);
+	top: 50%;
+  }
+  .flip-box i{
+	font-size: 5rem;
+	margin-top: 3rem;
+  }
+  .flip-box-header {
+	font-size: 4rem;
+	font-family: "Philosopher", sans-serif;
+	font-weight: 700;
+  }
+  
+  .flip-box p {
+	font-size: 1.8rem;
+	line-height: 1.5em;
+  }
+/* mission_area */
+.mission_area{
+	margin: 3rem 0 4rem;
+}
+.mission_area p{
+	text-align: justify;
+	margin-bottom: 1.5rem;
+}
+.mission_area h3{
+	font-size: 3rem;
+	color: var(--Yellow);
+}
+.mission_area h2{
+	font-size: 5.5rem;
+	color: var(--dark);
+}
+/* sponsor_area */
+.sponsor_area{
+	padding: 5rem 0;
+	background-color: #c99e673d;
+	margin-top: 5rem;
+}
+.sponsor_area img{
+	width: 27rem !important;
+}
+/* donate_area */
+.donate_area{
+	padding: 6rem 0 10rem;
+	background-color: #f5f5f5;
+}
+.donate_cart {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+	border: 1px solid #e8e8e8;
+	display: block;
+	padding-bottom: 9rem;
+}
+.donate_cart:hover{
+	border-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .09);
+}
+.donate_img {
+    overflow: hidden;
+    display: block;
+}
+.donate_img img{
+	height: 26.6rem;
+	object-fit: cover;
+}
+.donate_cart:hover .donate_img img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.donate_cont {
+    padding: 2.5rem 3.3rem 3.3rem;
+}
+.donate_cont h3 {
+    font-size: 2.8rem;
+    line-height: 1.20;
+    font-weight: 700;
+    color: var(--Yellow);
+	margin-bottom: 0.7rem;
+}
+.donate_cont p{
+	color: #828282;
+	text-align: justify;
+}
+.donate_cart .shop_btn {
+    width: calc(100% - 6.6rem);
+    position: absolute;
+    left: 3.3rem;
+    background: 3rem;
+    bottom: 4rem;
+}
+.donate_cart .shop_btn:hover{
+	background-color: var(--Yellow);
+	color: var(--dark);
 }
 /*footer*/
 footer{
