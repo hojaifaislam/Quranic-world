@@ -4,6 +4,11 @@
     $(window).on('load', function(){
         //===== Prealoder
         $("#preloader").delay(400).fadeOut();
+        
+        $('.fixed_col').isotope({
+        // options
+            itemSelector: '.review_col',
+        });
     });
 
     $(document).ready(function () {
@@ -31,7 +36,6 @@
                 $('.back-to-top').fadeOut(200)
             }
         });
-
         //Animate the scroll to yop
         $('.back-to-top').on('click', function (event) {
             event.preventDefault();
@@ -40,7 +44,6 @@
                 scrollTop: 0,
             }, 900);
         });
-
         // Hamburger-menu
         $('.hamburger-menu').on('click', function () {
             $('.hamburger-menu .line-top, .menu_wrapp').toggleClass('current');
@@ -63,7 +66,7 @@
                 '<i class="fal fa-long-arrow-right"></i>'],
                 responsive: {
                     0: {
-                        items: 1
+                        items: 2
                     },
                     390: {
                         items: 2
