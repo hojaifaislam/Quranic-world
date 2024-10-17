@@ -1089,10 +1089,24 @@ main {
 	height: 100%;
 	border-radius: 1rem;
 	padding: 4rem 2rem;
+	transition: 0.3s;
 }
-.address_wrap i{
+.address_wrap:hover .cont_icon{
+	background-color: var(--Yellow);
+	color: #fff;
+}
+.cont_icon {
+    width: 8rem;
+    height: 8rem;
+    border: 0.15rem solid var(--Yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
 	color: var(--Yellow);
-	font-size: 6rem;
+	font-size: 4rem;
+	transition: 0.3s;
 }
 .address_wrap h3{
 	color: var(--dark);
@@ -1107,7 +1121,36 @@ main {
 .address_wrap p{
 	color: #4f3f3f;
 }
+i.fas.fa-phone {
+    transform: rotate(96deg);
+}
+/* donate_from_area */
+.donate_from_area{
+	margin: 7rem 0 0;
+}
+.donate_from_cart {
+    border: 0.1rem solid var(--Yellow);
+    padding: 3rem;
+    width: 53rem;
+    margin: 0 auto;
+}
+.bank_wrap,
+.bkash_wrap{
+	display: flex;
+	align-items: center;
+}
+.bank_wrap img {
+    width: 9rem;
+    object-fit: cover;
+	margin-right: 3rem;
+}
+.bkash_wrap img{
+	width: 9rem;
+	object-fit: cover;
+	margin-right: 3rem;
+}
 /* get_area */
+
 .iframe_area {
     padding: 5rem 0 2rem;
 }
